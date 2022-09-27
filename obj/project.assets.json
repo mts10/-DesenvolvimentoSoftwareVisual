@@ -1665,11 +1665,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\mathe\\OneDrive\\Documentos\\EstoqueWebApi\\EstoqueWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\mathe\\ControledeEstoque\\EstoqueWebApi.csproj",
       "projectName": "EstoqueWebApi",
-      "projectPath": "c:\\Users\\mathe\\OneDrive\\Documentos\\EstoqueWebApi\\EstoqueWebApi.csproj",
+      "projectPath": "C:\\Users\\mathe\\ControledeEstoque\\EstoqueWebApi.csproj",
       "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\mathe\\OneDrive\\Documentos\\EstoqueWebApi\\obj\\",
+      "outputPath": "C:\\Users\\mathe\\ControledeEstoque\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config"
