@@ -16,12 +16,10 @@ namespace EstoqueWebApi.Controllers
 
         private static List<Produto> produtos = new List<Produto>();
 
-        // GET: /api/produto/listar
         [Route("listar")]
         [HttpGet]
         public IActionResult Listar() => Ok(_context.Produtos.ToList());
 
-        // POST: /api/produto/cadastrar
         [Route("cadastrar")]
         [HttpPost]
         public IActionResult Cadastrar([FromBody] Produto produto)
@@ -30,53 +28,41 @@ namespace EstoqueWebApi.Controllers
             _context.SaveChanges();
             return Created("", produto);
         }
-
-        // GET: /api/produto/buscar/123
-        [Route("buscar/{categoria}")]
+        
+        [Route("buscar/{id}")]
         [HttpGet]
-        public IActionResult Buscar([FromRoute] string categoria)
+        public IActionResult Buscar([FromRoute] int id)
         {
-            //Expressão lambda
-            Produto produto = _context.Produtos.FirstOrDefault
+            Produto produto =
+                _context.Produtos.FirstOrDefault
             (
-                f => f.Categoria.Equals(categoria)
+                f => f.ProdutoId.Equals(id)
             );
-            //IF ternário
             return produto != null ? Ok(produto) : NotFound();
         }
 
-        // DELETE: /api/produto/deletar/123
-        [Route("deletar/{categoria}")]
+        [Route("deletar/{id}")]
         [HttpDelete]
-        public IActionResult Deletar([FromRoute] string categoria)
+        public IActionResult Deletar([FromRoute] int id)
         {
-            Produto produto = produtos.FirstOrDefault
-            (
-                f => f.Categoria.Equals(categoria)
-            );
-            if (categoria != null)
+            Produto produto =
+                _context.Produtos.Find(id);
+            if (produto != null)
             {
-                produtos.Remove(produto);
+                _context.Produtos.Remove(produto);
+                _context.SaveChanges();
                 return Ok(produto);
             }
             return NotFound();
         }
 
-        // PATCH: /api/produto/alterar
         [Route("alterar")]
         [HttpPatch]
         public IActionResult Alterar([FromBody] Produto produto)
         {
-            Produto produtoBuscado = produtos.FirstOrDefault
-            (
-                f => f.Categoria.Equals(produto.Categoria)
-            );
-            if (produtoBuscado != null)
-            {
-                produtoBuscado.Nome = produto.Nome;
-                return Ok(produto);
-            }
-            return NotFound();
+            _context.Produtos.Update(produto);
+            _context.SaveChanges();
+            return Ok(produto);
         }
     }
 }

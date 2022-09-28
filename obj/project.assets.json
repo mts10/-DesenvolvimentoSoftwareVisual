@@ -1660,19 +1660,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mathe\\.nuget\\packages\\": {}
+    "C:\\Users\\enric\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mathe\\ControledeEstoque\\EstoqueWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\enric\\-DesenvolvimentoSoftwareVisual\\EstoqueWebApi.csproj",
       "projectName": "EstoqueWebApi",
-      "projectPath": "C:\\Users\\mathe\\ControledeEstoque\\EstoqueWebApi.csproj",
-      "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mathe\\ControledeEstoque\\obj\\",
+      "projectPath": "C:\\Users\\enric\\-DesenvolvimentoSoftwareVisual\\EstoqueWebApi.csproj",
+      "packagesPath": "C:\\Users\\enric\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\enric\\-DesenvolvimentoSoftwareVisual\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\enric\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1746,7 +1746,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

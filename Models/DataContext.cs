@@ -10,7 +10,7 @@ namespace EstoqueWebApi.Models
         { }
 
         public DbSet<Produto> Produtos { get; set; }
-        public DbSet<Estoque> Estoques { get; set; }
+        //public DbSet<Estoque> Estoques { get; set; }
         
     }
 }
