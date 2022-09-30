@@ -9,7 +9,8 @@ POST http://localhost:5060/api/estoque/cadastrar
 Content-Type: application/json
 
 {
-    "Quantidade" : "3"
+    "produtoId": "3",
+    "Quantidade" : "2"
 }
 
 ### Excluir um produto
