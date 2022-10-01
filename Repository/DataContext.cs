@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using EstoqueWebApi.Models;
 
-namespace EstoqueWebApi.Models
+namespace EstoqueWebApi.Repository
 {
   
     public class DataContext : DbContext
@@ -10,7 +11,6 @@ namespace EstoqueWebApi.Models
         { }
 
         public DbSet<Produto> Produto { get; set; }
-        public DbSet<Estoque> Estoque { get; set; }
         public DbSet<CategoriaPrd> CategoriaPrd { get; set; }
         
     }
