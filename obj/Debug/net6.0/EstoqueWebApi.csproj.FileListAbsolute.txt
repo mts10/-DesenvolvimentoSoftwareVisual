@@ -160,3 +160,13 @@ C:\Users\enric\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\refint\EstoqueWeb
 C:\Users\enric\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\EstoqueWebApi.pdb
 C:\Users\enric\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\EstoqueWebApi.genruntimeconfig.cache
 C:\Users\enric\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\ref\EstoqueWebApi.dll
+C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\EstoqueWebApi.csproj.AssemblyReference.cache
+C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\EstoqueWebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\EstoqueWebApi.AssemblyInfoInputs.cache
+C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\EstoqueWebApi.AssemblyInfo.cs
+C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\EstoqueWebApi.csproj.CoreCompileInputs.cache
+C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\EstoqueWebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\EstoqueWebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\EstoqueWebApi.dll
+C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\refint\EstoqueWebApi.dll
+C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\obj\Debug\net6.0\EstoqueWebApi.pdb

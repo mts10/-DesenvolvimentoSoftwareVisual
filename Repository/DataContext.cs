@@ -9,8 +9,9 @@ namespace EstoqueWebApi.Models
             base(options)
         { }
 
-        public DbSet<Produto> Produtos { get; set; }
-        public DbSet<Estoque> Estoques { get; set; }
+        public DbSet<Produto> Produto { get; set; }
+        public DbSet<Estoque> Estoque { get; set; }
+        public DbSet<CategoriaPrd> CategoriaPrd { get; set; }
         
     }
 }

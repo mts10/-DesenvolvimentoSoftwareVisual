@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EstoqueWebApi.Models
 {
-    public class Estoque
+    public class Quantidade
     {
-        public int EstoqueId { get; set; }
+         public int QuantidadeId { get; set; }
         [Range(
             0,
             1000000,

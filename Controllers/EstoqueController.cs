@@ -6,63 +6,36 @@ using Microsoft.AspNetCore.Mvc;
 namespace EstoqueWebApi.Controllers
 {
     [ApiController]
-    [Route("api/estoque")]
+    [Route("estoque")]
     public class EstoqueController : ControllerBase
     {
         private readonly DataContext _context;
-
-        public EstoqueController(DataContext context) =>
-            _context = context;
-
-        private static List<Estoque> estoques = new List<Estoque>();
-
-        [Route("listar")]
-        [HttpGet]
-        public IActionResult Listar() => Ok(_context.Estoques.ToList());
+        public EstoqueController(DataContext context) => _context = context;
 
         [Route("cadastrar")]
         [HttpPost]
-        public IActionResult Cadastrar([FromBody] Estoque estoque)
+        public IActionResult CadastrarProduro([FromBody] Estoque estoque)
         {
-            _context.Estoques.Add(estoque);
+            _context.Estoque.Add(estoque);
             _context.SaveChanges();
-            return Created("", estoque);
+            return Created("", estoque); 
         }
-        
-        [Route("buscar/{id}")]
+        [Route("listar")]
         [HttpGet]
-        public IActionResult Buscar([FromRoute] int id)
+        public IActionResult ListarProdutos()
         {
-            Estoque estoque =
-                _context.Estoques.FirstOrDefault
-            (
-                f => f.EstoqueId.Equals(id)
-            );
-            return estoque != null ? Ok(estoque) : NotFound();
+            var estoques = _context.Estoque
+                .Include(estoque => estoque.Produto)
+                .Include(estoque => estoque.Quantidade)
+                .Include(estoque => estoque.CategoriaPrd)
+                .ToList();
+            
+            return Ok(estoques);
         }
 
-        [Route("deletar/{id}")]
-        [HttpDelete]
-        public IActionResult Deletar([FromRoute] int id)
-        {
-            Estoque estoque =
-                _context.Estoques.Find(id);
-            if (estoque != null)
-            {
-                _context.Estoques.Remove(estoque);
-                _context.SaveChanges();
-                return Ok(estoque);
-            }
-            return NotFound();
-        }
 
-        [Route("alterar")]
-        [HttpPatch]
-        public IActionResult Alterar([FromBody] Estoque estoque)
-        {
-            _context.Estoques.Update(estoque);
-            _context.SaveChanges();
-            return Ok(estoque);
-        }
+
+
     }
+    
 }
