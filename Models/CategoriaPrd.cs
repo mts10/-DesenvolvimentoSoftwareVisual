@@ -1,11 +1,12 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
+using EstoqueWebApi.Models;
 
 namespace EstoqueWebApi.Models
 {
     public class CategoriaPrd
     {
-        public int CatId { get; set; }
+        public int Id { get; set; }
         [Required(ErrorMessage = "O campo da categoria é obrigatório!")]
         public string Categoria { get; set; }
       [Range(
@@ -15,7 +16,7 @@ namespace EstoqueWebApi.Models
         )]
         public int Quantidade{ get; set; }
 
-        public List<Produto> Produtos { get; set; }
+        public List<Consulta> Consultas { get; set; }
 
 
         public CategoriaPrd(string Categoria, int Quantidade) {

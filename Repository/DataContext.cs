@@ -12,6 +12,7 @@ namespace EstoqueWebApi.Repository
 
         public DbSet<Produto> Produto { get; set; }
         public DbSet<CategoriaPrd> CategoriaPrd { get; set; }
+        public DbSet<Consulta> Consulta { get; set; }
         
     }
 }

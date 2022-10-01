@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EstoqueWebApi.Models
 {
-    public class Estoque
+    public class Consulta
     {
         public int Id { get; set; }
         [DataType(DataType.Date, ErrorMessage="Data em formato inválido")]
@@ -15,15 +15,15 @@ namespace EstoqueWebApi.Models
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Produto Produto { get; set; }
         [Required(ErrorMessage = "Informe uma categoria")]
-        public int CatId { get; set; }
+        public int  Categoria { get; set; }
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public CategoriaPrd CategoriaPrd { get; set; }
         
 
-        public Estoque(DateTime ConsultationDate, int ProdutoId, int CatId) {
+        public Consulta(DateTime ConsultationDate, int ProdutoId, int Categoria) {
             this.ConsultationDate = ConsultationDate;
             this.ProdutoId = ProdutoId;
-            this.CatId = CatId;
+            this.Categoria = Categoria;
             
         }
     }

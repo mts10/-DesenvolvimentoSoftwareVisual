@@ -15,7 +15,7 @@ namespace EstoqueWebApi.Models
         public float Preço { get; set; }
         public DateTime CriadoEm { get; set; }
 
-        public List<Produto> Produtos { get; set; }
+        public virtual List<Consulta> Consultas { get; set; }
     
     public Produto(string Nome, float Preço)
     {
