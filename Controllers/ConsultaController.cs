@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 namespace EstoqueWebApi.Controllers
 {
     
-    [Route("consulta")]
+    [Route("api/consulta")]
     [ApiController]
     public class ConsultaController : ControllerBase
     {
@@ -16,7 +16,7 @@ namespace EstoqueWebApi.Controllers
 
          public ConsultaController(DataContext context) => _context = context;
 
-         [Route("cadastrar")]
+         [Route("api/cadastrar")]
         [HttpPost]
         public IActionResult CadastrarProduto([FromBody] Consulta consulta)
         {
@@ -34,21 +34,6 @@ namespace EstoqueWebApi.Controllers
                 .ToList();
             
             return Ok(consultas);
-        }
-        [Route("cancelar/{id}")]
-        [HttpDelete]
-        public IActionResult CancelarConsulta([FromRoute] int id)
-        {
-            Consulta consulta = _context.Consulta.Find(id);
-
-            if(consulta != null)
-            {
-                _context.Consulta.Remove(consulta);
-                _context.SaveChanges();
-                return Ok(consulta);
-            }
-
-            return NotFound("Nenhuma consulta foi achada com o id: " + id);
         }
     }
 }
