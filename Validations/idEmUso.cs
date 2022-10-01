@@ -19,7 +19,7 @@ namespace EstoqueWebApi.Validations
             Produto resultado =
                 context.Produto.FirstOrDefault
                 (
-                    f => f.Id.Equals(id)
+                    f => f.ProdutoId.Equals(id)
                 );
             return resultado == null ?
                 ValidationResult.Success :
