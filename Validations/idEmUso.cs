@@ -1,7 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using EstoqueWebApi.Models;
-using EstoqueWebApi.Repository;
 
 namespace EstoqueWebApi.Validations
 {
@@ -17,7 +16,7 @@ namespace EstoqueWebApi.Validations
                 GetService(typeof(DataContext));
 
             Produto resultado =
-                context.Produto.FirstOrDefault
+                context.Produtos.FirstOrDefault
                 (
                     f => f.ProdutoId.Equals(id)
                 );
