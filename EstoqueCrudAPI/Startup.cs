@@ -37,6 +37,8 @@ namespace EstoqueWebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EstoqueWebApi", Version = "v1" });
             });
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +56,8 @@ namespace EstoqueWebApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(opcoes => opcoes.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseEndpoints(endpoints =>
             {
