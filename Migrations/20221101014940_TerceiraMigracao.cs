@@ -4,7 +4,7 @@
 
 namespace EstoqueWebApi.Migrations
 {
-    public partial class CriacaoBD : Migration
+    public partial class TerceiraMigracao : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

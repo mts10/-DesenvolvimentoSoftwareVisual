@@ -9,7 +9,7 @@ POST http://localhost:5060/api/produto/cadastrar
 Content-Type: application/json
 
 {
-    "produtoId": 3,
+    "produtoId": "1",
     "nome" : "Sapato Social",
     "categoria" : "Tênis"
 }

@@ -13,6 +13,14 @@ namespace EstoqueWebApi.Models
         public string Nome { get; set; }
         [Required(ErrorMessage = "O campo categoria é obrigatório!")]
         public string Categoria { get; set; }
+        public double Preco { get; set; }
         public DateTime CriadoEm { get; set; }
+
+        public Produto(string ProdutoId, string Nome, string Categoria, DateTime CriadoEm) {
+            this.ProdutoId = ProdutoId;
+            this.Nome = Nome;
+            this.Categoria = Categoria;
+            this.CriadoEm = DateTime.Now;
+        }
     }
 }

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EstoqueWebApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220929233539_NewMigration")]
-    partial class NewMigration
+    [Migration("20221101015249_gsdgs")]
+    partial class gsdgs
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,19 +25,23 @@ namespace EstoqueWebApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("ProdutoId")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("Quantidade")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("EstoqueId");
+
+                    b.HasIndex("ProdutoId");
 
                     b.ToTable("Estoques");
                 });
 
             modelBuilder.Entity("EstoqueWebApi.Models.Produto", b =>
                 {
-                    b.Property<int>("ProdutoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("ProdutoId")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Categoria")
                         .IsRequired()
@@ -50,9 +54,21 @@ namespace EstoqueWebApi.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<double>("Preco")
+                        .HasColumnType("REAL");
+
                     b.HasKey("ProdutoId");
 
                     b.ToTable("Produtos");
+                });
+
+            modelBuilder.Entity("EstoqueWebApi.Models.Estoque", b =>
+                {
+                    b.HasOne("EstoqueWebApi.Models.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId");
+
+                    b.Navigation("Produto");
                 });
 #pragma warning restore 612, 618
         }

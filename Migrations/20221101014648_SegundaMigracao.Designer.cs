@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EstoqueWebApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220928010330_NewMii")]
-    partial class NewMii
+    [Migration("20221101014648_SegundaMigracao")]
+    partial class SegundaMigracao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,23 +21,28 @@ namespace EstoqueWebApi.Migrations
 
             modelBuilder.Entity("EstoqueWebApi.Models.Estoque", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("EstoqueId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("ProdutoId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Quantidade")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.HasKey("EstoqueId");
+
+                    b.HasIndex("ProdutoId");
 
                     b.ToTable("Estoques");
                 });
 
             modelBuilder.Entity("EstoqueWebApi.Models.Produto", b =>
                 {
-                    b.Property<int>("ProdutoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("ProdutoId")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Categoria")
                         .IsRequired()
@@ -50,9 +55,23 @@ namespace EstoqueWebApi.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<double>("Preco")
+                        .HasColumnType("REAL");
+
                     b.HasKey("ProdutoId");
 
                     b.ToTable("Produtos");
+                });
+
+            modelBuilder.Entity("EstoqueWebApi.Models.Estoque", b =>
+                {
+                    b.HasOne("EstoqueWebApi.Models.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Produto");
                 });
 #pragma warning restore 612, 618
         }
