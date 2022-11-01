@@ -1,0 +1,32 @@
+### Listar estoques disponiveis
+GET http://localhost:5060/api/estoque/listar
+
+### Buscar estoque
+GET http://localhost:5060/api/estoque/buscar/1
+
+### Cadastrar estoque
+POST http://localhost:5060/api/estoque/cadastrar
+Content-Type: application/json
+
+{
+    "estoqueoId": "1",
+    "quantidade": 10,
+    "produto": {
+        "produtoId": "5",
+        "nome" : "Presunto Sadia",
+        "categoria" : "Processados",
+        "preco": 5.30
+    }
+}
+
+### Excluir 
+DELETE http://localhost:5060/api/estoque/deletar/2
+
+### Alterar um registro
+PATCH http://localhost:5060/api/estoque/alterar
+Content-Type: application/json
+
+{
+    "estoqueoId": "1",
+    "quantidade": "12"
+}
