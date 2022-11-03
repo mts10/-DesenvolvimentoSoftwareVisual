@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oloZ6p3SPhEtWvAadtUK23rD97eG3ziy1e80nCXD9XgAu52AHjnKE6B4nmLaYUpk72S37aafAxfntWLBc62WqA==",
+  "dgSpecHash": "p7y/0VFKuxXMVky78nEWVh8BKTYf2lBaIXIuMBBz2xpJpncdZRU5bZAmmMKjUNdgLVSgZM7/2cjqWBysntYVlA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mathe\\OneDrive\\Documentos\\Angular\\-DesenvolvimentoSoftwareVisual\\EstoqueCrudApi\\EstoqueWebApi.csproj",
+  "projectFilePath": "C:\\Users\\mathe\\OneDrive\\Documentos\\-DesenvolvimentoSoftwareVisual\\estoquecrudapi\\EstoqueWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mathe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mathe\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.9\\microsoft.data.sqlite.core.6.0.9.nupkg.sha512",

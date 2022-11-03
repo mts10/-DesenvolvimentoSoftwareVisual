@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathe\\OneDrive\\Documentos\\Angular\\-DesenvolvimentoSoftwareVisual\\EstoqueCrudApi\\EstoqueWebApi.csproj": {}
+    "C:\\Users\\mathe\\OneDrive\\Documentos\\-DesenvolvimentoSoftwareVisual\\estoquecrudapi\\EstoqueWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathe\\OneDrive\\Documentos\\Angular\\-DesenvolvimentoSoftwareVisual\\EstoqueCrudApi\\EstoqueWebApi.csproj": {
+    "C:\\Users\\mathe\\OneDrive\\Documentos\\-DesenvolvimentoSoftwareVisual\\estoquecrudapi\\EstoqueWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Documentos\\Angular\\-DesenvolvimentoSoftwareVisual\\EstoqueCrudApi\\EstoqueWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Documentos\\-DesenvolvimentoSoftwareVisual\\estoquecrudapi\\EstoqueWebApi.csproj",
         "projectName": "EstoqueWebApi",
-        "projectPath": "C:\\Users\\mathe\\OneDrive\\Documentos\\Angular\\-DesenvolvimentoSoftwareVisual\\EstoqueCrudApi\\EstoqueWebApi.csproj",
+        "projectPath": "C:\\Users\\mathe\\OneDrive\\Documentos\\-DesenvolvimentoSoftwareVisual\\estoquecrudapi\\EstoqueWebApi.csproj",
         "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\OneDrive\\Documentos\\Angular\\-DesenvolvimentoSoftwareVisual\\EstoqueCrudApi\\obj\\",
+        "outputPath": "C:\\Users\\mathe\\OneDrive\\Documentos\\-DesenvolvimentoSoftwareVisual\\estoquecrudapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,7 +1,7 @@
-export class Produtos {
+export interface Produto {
 
   ProdutoId?: number;
-  Nome?: string;
-  Categoria?: string;
-  Preco?: number;
+  Nome: string;
+  Categoria: string;
+  Preco: number;
 }
