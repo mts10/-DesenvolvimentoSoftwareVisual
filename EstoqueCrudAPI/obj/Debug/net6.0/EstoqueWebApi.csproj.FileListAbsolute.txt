@@ -323,3 +323,4 @@ C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\estoquecrudapi
 C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\estoquecrudapi\obj\Debug\net6.0\EstoqueWebApi.pdb
 C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\estoquecrudapi\obj\Debug\net6.0\EstoqueWebApi.genruntimeconfig.cache
 C:\Users\mathe\OneDrive\Documentos\-DesenvolvimentoSoftwareVisual\estoquecrudapi\obj\Debug\net6.0\ref\EstoqueWebApi.dll
+C:\Users\mathe\OneDrive\Documentos\Angular\-DesenvolvimentoSoftwareVisual\EstoqueCrudApi\bin\Debug\net6.0\package-lock.json

@@ -38,12 +38,12 @@ export class ProdutosComponent implements OnInit {
     this.visibilidadeTabela = true;
 
     this.produtosService.PegarPeloId(produtoId).subscribe(resultado => {
-    this.tituloFormulario = `Atualizar ${resultado.Nome} ${resultado.Categoria}`;
+    this.tituloFormulario = `Atualizar ${resultado.nome} ${resultado.categoria}`;
     this.formulario = new FormGroup({
-      produtoId: new FormControl(resultado.ProdutoId),
-      Nome: new FormControl(resultado.Nome),
-      Categoria: new FormControl(resultado.Categoria),
-      Preco: new FormControl(resultado.Preco),
+      produtoId: new FormControl(resultado.produtoId),
+      Nome: new FormControl(resultado.nome),
+      Categoria: new FormControl(resultado.categoria),
+      Preco: new FormControl(resultado.preco),
     });
     });
   }
