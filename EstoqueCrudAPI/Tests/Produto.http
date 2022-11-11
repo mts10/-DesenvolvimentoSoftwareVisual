@@ -9,10 +9,10 @@ POST http://localhost:5060/api/produto/cadastrar
 Content-Type: application/json
 
 {
-    "produtoId": "40",
+    "produtoId": 40,
     "nome" : "Sapato Social",
     "categoria" : "Tênis",
-    "preço": 124.00
+    "preço": 124.00,
 }
 
 ### Excluir um produto
@@ -22,8 +22,10 @@ DELETE http://localhost:5060/api/produto/deletar/4
 PATCH http://localhost:5060/api/produto/alterar
 Content-Type: application/json
 
-{
-    "produtoId": "1",
-    "nome" : "Air Force",
-    "categoria" : "Sapatos"
-}
+  {
+    "produtoId": 1,
+    "nome": "Air Force",
+    "categoria": "Tênis",
+    "preco": 0,
+    "criadoEm": "2022-11-01T17:15:53.0037678"
+  },

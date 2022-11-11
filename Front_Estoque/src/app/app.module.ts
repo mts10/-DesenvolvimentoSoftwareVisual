@@ -1,26 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProdutosComponent } from './components/produtos/produtos.component';
-import { HttpClientModule } from '@angular/common/http';
-import { ProdutosService } from './produtos.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ListarProdutosComponent } from './components/listar-produtos/listar-produtos.component';
+import { CadastrarProdutosComponent } from './components/cadastrar-produtos/cadastrar-produtos.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProdutosComponent
+    ListarProdutosComponent,
+    CadastrarProdutosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
-    CommonModule,
-    ReactiveFormsModule,
   ],
-  providers: [HttpClientModule, ProdutosService, BrowserModule, AppRoutingModule],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
