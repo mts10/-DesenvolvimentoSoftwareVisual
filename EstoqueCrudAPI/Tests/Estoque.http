@@ -12,7 +12,7 @@ Content-Type: application/json
     "estoqueoId": "1",
     "quantidade": 10,
     "produto": {
-        "produtoId": "5",
+        "produtoId": "1",
         "nome" : "Presunto Sadia",
         "categoria" : "Processados",
         "preco": 5.30

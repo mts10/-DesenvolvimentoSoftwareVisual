@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Produto } from 'src/app/Models/Produto';
 
 @Component({
   selector: 'app-cadastrar-produtos',
@@ -9,26 +10,33 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./cadastrar-produtos.component.css']
 })
 export class CadastrarProdutosComponent implements OnInit {
-  formulario: any;
-  tituloFormulario?: string;
-
-
-  constructor(
-    private http: HttpClient,
-    private router: Router,
-    private route: ActivatedRoute
-  ) { }
+  nome!: string;
+  categoria!: string;
+  preco!: number;
+  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-
+    // this.http.get<Produto[]>("https://localhost:5001/api/produto/listar").subscribe({
+    //   next: (produtos) => {
+    //     this.produtos = produtos;
+    //   },
+    // });
   }
-  ExibirFormularioCadastro(): void {
-    this.tituloFormulario = 'Novo Produto';
-    this.formulario = new FormGroup({
-      Nome: new FormControl(null),
-      Categoria: new FormControl(null),
-      Preco: new FormControl(null),
 
+  cadastrar(): void {
+    let produto: Produto = {
+      produtoId: 103,
+      nome: this.nome,
+      categoria: this.categoria,
+      preco: this.preco,
+    };
+
+    console.log(produto);
+    this.http.post<Produto>("https://localhost:7208/api/produto/cadastrar", produto).subscribe({
+      next: (produto) => {
+        this.router.navigate(["produto/listar"]);
+      },
     });
   }
+
 }
