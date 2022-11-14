@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: "produto/listar",
     component: ListarProdutosComponent
+  },
+  {
+    path: "produto/cadastrar/:id",
+    component: CadastrarProdutosComponent
   }
 ];
 

@@ -17,10 +17,13 @@
     <td>{{produto.categoria}}</td>
     <td>{{produto.preco}}</td>
     <td>
-      <button type="button"  class="btn btn-sm btn-outline-info" >Atualizar</button>
       <button type="button" class="btn btn-sm btn-outline-info" (click)="remover(produto.produtoId!)">Excluir</button>
     </td>
-
+    <td>
+      <a routerLink="/produto/cadastrar/{{ produto.produtoId }}">
+        Alterar
+      </a>
+    </td>
   </tr>
 </table>
 </div>
