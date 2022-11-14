@@ -18,12 +18,11 @@
     <td>{{produto.preco}}</td>
     <td>
       <button type="button" class="btn btn-sm btn-outline-info" (click)="remover(produto.produtoId!)">Excluir</button>
-    </td>
-    <td>
-      <a routerLink="/produto/cadastrar/{{ produto.produtoId }}">
+       <a routerLink="/produto/cadastrar/{{ produto.produtoId }}"  class="btn btn-sm btn-outline-info" >
         Alterar
       </a>
     </td>
+
   </tr>
 </table>
 </div>
