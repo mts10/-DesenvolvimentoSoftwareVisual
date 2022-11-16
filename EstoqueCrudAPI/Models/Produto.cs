@@ -8,11 +8,9 @@ namespace EstoqueWebApi.Models
     {
         public Produto() => CriadoEm = DateTime.Now;
         //[idEmUso]
-        // [Key]
+        [Key]
         public int ProdutoId { get; set; }
-        [Required(ErrorMessage = "O campo nome é obrigatório!")]
         public string Nome { get; set; }
-        [Required(ErrorMessage = "O campo categoria é obrigatório!")]
         public string Categoria { get; set; }
         public double Preco { get; set; }
         public DateTime CriadoEm { get; set; }

@@ -38,7 +38,6 @@ export class CadastrarProdutosComponent implements OnInit {
 
   cadastrar(): void {
     let produto: Produto = {
-      produtoId: 2241,
       nome: this.nome,
       categoria: this.categoria,
       preco: this.preco,
