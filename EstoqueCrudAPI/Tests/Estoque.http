@@ -9,13 +9,13 @@ POST http://localhost:5060/api/estoque/cadastrar
 Content-Type: application/json
 
 {
-    "estoqueoId": "1",
-    "quantidade": 10,
+    "estoqueoId": "2",
+    "quantidade": 5,
     "produto": {
-        "produtoId": "1",
-        "nome" : "Presunto Sadia",
-        "categoria" : "Processados",
-        "preco": 5.30
+        "produtoId": "2",
+        "nome" : "iPhone 15",
+        "categoria" : "Celulares",
+        "preco": 9999.00
     }
 }
 

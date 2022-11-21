@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { ListarProdutosComponent } from './components/listar-produtos/listar-produtos.component';
 import { CadastrarProdutosComponent } from './components/cadastrar-produtos/cadastrar-produtos.component';
 import { FormsModule } from '@angular/forms';
+import { ListarEstoquesComponent } from './components/listar-estoques/listar-estoques.component';
+import { CadastrarEstoquesComponent } from './components/cadastrar-estoques/cadastrar-estoques.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarProdutosComponent,
-    CadastrarProdutosComponent
+    CadastrarProdutosComponent,
+    ListarEstoquesComponent,
+    CadastrarEstoquesComponent
   ],
   imports: [
     BrowserModule,
