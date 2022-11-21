@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using EstoqueWebApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EstoqueWebApi.Controllers
 {
@@ -18,7 +19,15 @@ namespace EstoqueWebApi.Controllers
 
         [Route("listar")]
         [HttpGet]
-        public IActionResult Listar() => Ok(_context.Estoques.ToList());
+        public IActionResult Listar()
+        {
+            List<Estoque> estoques =
+                _context.Estoques.Include(f => f.Produto).ToList();
+
+            if (estoques.Count == 0) return NotFound();
+
+            return Ok(estoques);
+        }
 
         [Route("cadastrar")]
         [HttpPost]

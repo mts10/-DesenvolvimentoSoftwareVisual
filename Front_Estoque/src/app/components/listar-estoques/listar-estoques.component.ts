@@ -8,15 +8,14 @@ import { Estoque } from 'src/app/Models/Estoque';
   styleUrls: ['./listar-estoques.component.css']
 })
 export class ListarEstoquesComponent implements OnInit {
-
 estoques!: Estoque[];
-
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get<Estoque[]>("https://localhost:7208/api/estoque/listar")
     .subscribe({
       next: (estoques) => {
+        console.log(estoques);
         this.estoques = estoques;
       }
     });
@@ -30,6 +29,4 @@ estoques!: Estoque[];
       }
     })
   }
-
-
 }
