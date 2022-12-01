@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\enric\\Trabalho\\API_Estoque\\API_FOlhas.csproj": {}
+    "C:\\Users\\enric\\-DesenvolvimentoSoftwareVisual\\API_Estoque\\API_FOlhas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\enric\\Trabalho\\API_Estoque\\API_FOlhas.csproj": {
+    "C:\\Users\\enric\\-DesenvolvimentoSoftwareVisual\\API_Estoque\\API_FOlhas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\enric\\Trabalho\\API_Estoque\\API_FOlhas.csproj",
+        "projectUniqueName": "C:\\Users\\enric\\-DesenvolvimentoSoftwareVisual\\API_Estoque\\API_FOlhas.csproj",
         "projectName": "API_FOlhas",
-        "projectPath": "C:\\Users\\enric\\Trabalho\\API_Estoque\\API_FOlhas.csproj",
+        "projectPath": "C:\\Users\\enric\\-DesenvolvimentoSoftwareVisual\\API_Estoque\\API_FOlhas.csproj",
         "packagesPath": "C:\\Users\\enric\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\enric\\Trabalho\\API_Estoque\\obj\\",
+        "outputPath": "C:\\Users\\enric\\-DesenvolvimentoSoftwareVisual\\API_Estoque\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\enric\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -41,7 +41,7 @@ export class CadastrarEstoqueComponent implements OnInit {
           horizontalPosition: "right",
           verticalPosition: "top",
         });
-        this.router.navigate(["pages/produto/listar"]);
+        this.router.navigate(["pages/estoque/listar"]);
       },
     });
   }
