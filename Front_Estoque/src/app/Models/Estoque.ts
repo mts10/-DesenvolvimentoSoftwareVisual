@@ -1,11 +1,10 @@
-import { Produto } from "./Produto";
+import { Produto } from "./produto";
 
 export interface Estoque {
-    estoqueId?: number,
-    quantidade: number,
+    estoqueId?: number;
+    quantidade: number;
+    produto?: Produto
+    criadoEm: string;
     produtoId: number;
-    nome: string;
-    produto?: Produto;
-    categoria: string;
-    preco: number; 
+    centro?: string;
 }

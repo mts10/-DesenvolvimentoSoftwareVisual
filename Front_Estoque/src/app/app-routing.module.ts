@@ -1,35 +1,44 @@
-import { ListarProdutosComponent } from './components/listar-produtos/listar-produtos.component';
-import { CadastrarProdutosComponent } from './components/cadastrar-produtos/cadastrar-produtos.component';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { ListarEstoquesComponent } from './components/listar-estoques/listar-estoques.component';
-import { CadastrarEstoquesComponent } from './components/cadastrar-estoques/cadastrar-estoques.component';
+import { ListarEstoqueComponent } from "./components/pages/estoque/listar-estoque/listar-estoque.component";
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { CadastrarEstoqueComponent } from "./components/pages/estoque/cadastrar-estoque/cadastrar-estoque.component";
+import { CadastrarProdutoComponent } from "./components/pages/produto/cadastrar-produto/cadastrar-produto.component";
+import { ListarProdutoComponent } from "./components/pages/produto/listar-produto/listar-produto.component";
+import { CdEstoquesComponent } from "./components/pages/cd-estoques/cd-estoques.component";
 
 const routes: Routes = [
   {
-    path: "produto/cadastrar",
-    component: CadastrarProdutosComponent
+    path: "pages/produto/cadastrar",
+    component: CadastrarProdutoComponent,
   },
   {
-    path: "produto/listar",
-    component: ListarProdutosComponent
+    path: "pages/produto/cadastrar/:id",
+    component: CadastrarProdutoComponent,
   },
   {
-    path: "produto/cadastrar/:id",
-    component: CadastrarProdutosComponent
+    path: "pages/produto/listar",
+    component: ListarProdutoComponent,
   },
   {
-    path: "estoque/listar",
-    component: ListarEstoquesComponent
+    path: "pages/estoque/cadastrar",
+    component: CadastrarEstoqueComponent,
   },
   {
-    path: "estoque/cadastrar",
-    component: CadastrarEstoquesComponent
+    path: "pages/estoque/listar",
+    component: ListarEstoqueComponent,
+  },
+  {
+    path: "pages/cd-estoques/cd-estoques",
+    component: CdEstoquesComponent
+  },
+  {
+    path: "pages/cd-estoques/cd-estoques/:id",
+    component: CdEstoquesComponent,
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

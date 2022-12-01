@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>#</th>
+    <th>Produto</th>
+    <th>Quantidade</th>
+    <th>Criado em</th>
+    <th>Centro</th>
+    <th>Remover Estoque</th>
+    <th>Atribuir Centro</th>
+  </tr>
+  <tr *ngFor="let estoque of estoques">
+    <td>{{ estoque.estoqueId }}</td>
+    <td>{{ estoque.produtoId }}</td>
+    <td>{{ estoque.quantidade }}</td>
+    <td>{{ estoque.criadoEm }}</td>
+    <td>{{ estoque.centro }}</td>
+    <td>
+      <button (click)="remover(estoque.estoqueId!)">Remover</button>
+    </td>
+    <td>
+      <a
+        routerLink="/../pages/cd-estoques/cd-estoques/{{ estoque.estoqueId }}"
+      >
+        Atribuir
+      </a>
+  </tr>
+</table>

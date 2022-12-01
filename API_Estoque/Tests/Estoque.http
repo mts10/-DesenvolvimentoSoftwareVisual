@@ -1,0 +1,17 @@
+### 
+GET https://localhost:5001/api/estoque/listar
+
+### 
+GET https://localhost:5001/api/estoque/buscar/15975365472/12/2022
+
+### 
+GET https://localhost:5001/api/estoque/filtrar/12/2022
+
+### 
+POST https://localhost:5001/api/estoque/cadastrar
+Content-Type: application/json
+
+{
+    "quantidade": 150,
+    "produtoId": 1
+}

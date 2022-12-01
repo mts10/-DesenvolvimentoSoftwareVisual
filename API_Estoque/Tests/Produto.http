@@ -1,0 +1,27 @@
+### 
+GET https://localhost:5001/api/produto/listar
+
+### 
+GET https://localhost:5001/api/produto/buscar/123
+
+### 
+POST https://localhost:5001/api/produto/cadastrar
+Content-Type: application/json
+
+{
+    "produtoId": 2,
+    "nome": "iPhone 14",
+    "categoria": "Celulares",
+    "preco": 9000
+}
+
+###
+DELETE https://localhost:5001/api/produto/deletar/8
+
+###
+PATCH https://localhost:5001/api/produto/alterar
+Content-Type: application/json
+
+{
+    
+}

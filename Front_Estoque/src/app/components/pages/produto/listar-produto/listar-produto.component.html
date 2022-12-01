@@ -1,0 +1,26 @@
+<h1>Listar Produtos</h1>
+
+<table>
+  <tr>
+    <th>#</th>
+    <th>Nome</th>
+    <th>Categoria</th>
+    <th>Preço</th>
+    <th>Criado em</th>
+    <th>Remover</th>
+    <th>Alterar</th>
+  </tr>
+  <tr *ngFor="let produto of produtos">
+    <td>{{ produto.produtoId }}</td>
+    <td>{{ produto.nome }}</td>
+    <td>{{ produto.categoria }}</td>
+    <td>{{ produto.preco }}</td>
+    <td>{{ produto.criadoEm | date: "dd/MM/yyyy" }}</td>
+    <td>
+      <button (click)="remover(produto.produtoId!)">Remover</button>
+    </td>
+    <td>
+      <a routerLink="/pages/produto/cadastrar/{{ produto.produtoId }}"> Alterar </a>
+    </td>
+  </tr>
+</table>

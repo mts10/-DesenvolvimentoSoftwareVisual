@@ -1,0 +1,26 @@
+<mat-card class="container">
+  <mat-card-header>
+    <mat-card-title>Cadastrar Produtos</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field *ngIf="id" class="input" id="id">
+      <mat-label for="id">Produto Id:</mat-label>
+      <input disabled="" matInput type="text" name="id" [(ngModel)]="id" />
+    </mat-form-field>
+    <mat-form-field class="input" id="nome">
+      <mat-label for="nome">Nome:</mat-label>
+      <input matInput type="text" name="nome" [(ngModel)]="nome" />
+    </mat-form-field>
+    <mat-form-field class="input" id="categoria">
+      <mat-label for="categoria">Categoria:</mat-label>
+      <input matInput type="text" name="categoria" [(ngModel)]="categoria" />
+    </mat-form-field>
+    <mat-form-field class="input" id="preco">
+      <mat-label for="preco">Preço:</mat-label>
+      <input matInput type="preco" name="preco" [(ngModel)]="preco" />
+    </mat-form-field>
+  </mat-card-content>
+
+  <button mat-raised-button color="warn" *ngIf="!id" id="btnCadastrar" (click)="cadastrar()">Cadastrar</button>
+  <button mat-raised-button color="warn" *ngIf="id" id="btnAlterar" (click)="alterar()">Alterar</button>
+</mat-card>

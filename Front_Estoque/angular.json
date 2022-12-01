@@ -1,11 +1,44 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "412cf7a1-abaa-4618-a65c-e862d5576603"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Front_Estoque": {
+    "FRONT_Folhas": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": false,
+          "inlineStyle": false,
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +46,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/front-estoque",
+            "outputPath": "dist/front-folhas",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,6 +56,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -64,10 +98,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Front_Estoque:build:production"
+              "browserTarget": "FRONT_Folhas:build:production"
             },
             "development": {
-              "browserTarget": "Front_Estoque:build:development"
+              "browserTarget": "FRONT_Folhas:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,30 +109,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Front_Estoque:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            "browserTarget": "FRONT_Folhas:build"
           }
         }
       }
     }
   },
-  "cli": {
-    "analytics": "08a26bbc-29e5-4d92-8f2e-ae09acdd640d"
-  }
+  "defaultProject": "FRONT_Folhas"
 }
